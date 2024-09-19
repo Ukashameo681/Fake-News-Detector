@@ -6,7 +6,7 @@ from nltk.stem.porter import PorterStemmer
 
 import nltk
 
-nltk.download("stopwords")
+nltk.download("stopwords", quiet=True)
 
 # Load the trained model and vectorizer
 with open(r'Model Traning\Model (1).pkl', 'rb') as model_file:
