@@ -4,11 +4,15 @@ import re
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
+import nltk
+
+nltk.download("stopwords")
+
 # Load the trained model and vectorizer
-with open(r'D:\Data Science Projects life\Fake News Predictor\Model Traning\Model (1).pkl', 'rb') as model_file:
+with open(r'Model Traning\Model (1).pkl', 'rb') as model_file:
     classifier = pickle.load(model_file)
 
-with open(r'D:\Data Science Projects life\Fake News Predictor\Model Traning\vectorizer.pkl', 'rb') as vec_file:
+with open(r'Model Traning\vectorizer.pkl', 'rb') as vec_file:
     vectorizer = pickle.load(vec_file)
 
 def preprocess_text(text):
